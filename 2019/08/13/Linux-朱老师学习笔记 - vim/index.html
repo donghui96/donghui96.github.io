@@ -6,36 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.zdh666.club">
-  <title>基于wz指令 stm32onenet对接 sprintf | 周东辉的个人博客</title>
+  <title>Linux---vi的使用 | 周东辉的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt">
+  <meta name="description" content="vi基础使用使用vi来打开/创建一个文件，vi pathname
+vi的两种模式：命令模式：当vi打开时默认为命令模式，要转入输入模式，需要按a或者i键。在命令模式下，此时键盘上输入的所有东西都被vi当作命令来对待。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于wz指令 stm32onenet对接 sprintf">
-<meta property="og:url" content="www.zdh666.club/2019/07/18/wz stm32对接onenet/index.html">
+<meta property="og:title" content="Linux---vi的使用">
+<meta property="og:url" content="www.zdh666.club/2019/08/13/Linux-朱老师学习笔记 - vim/index.html">
 <meta property="og:site_name" content="周东辉的个人博客">
-<meta property="og:description" content="今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019080720153360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019080720160969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019080720170344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,tchuangjian
-创建好了之后添加设备
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019080720191259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807201958340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807202057701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807202147549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807202828960.jpg">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203220535.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203318831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203341177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203425435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203610795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203727312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203920687.jpg">
-<meta property="og:updated_time" content="2019-08-10T03:25:34.061Z">
+<meta property="og:description" content="vi基础使用使用vi来打开/创建一个文件，vi pathname
+vi的两种模式：命令模式：当vi打开时默认为命令模式，要转入输入模式，需要按a或者i键。在命令模式下，此时键盘上输入的所有东西都被vi当作命令来对待。">
+<meta property="og:updated_time" content="2019-09-22T01:52:14.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于wz指令 stm32onenet对接 sprintf">
-<meta name="twitter:description" content="今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019080720153360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="Linux---vi的使用">
+<meta name="twitter:description" content="vi基础使用使用vi来打开/创建一个文件，vi pathname
+vi的两种模式：命令模式：当vi打开时默认为命令模式，要转入输入模式，需要按a或者i键。在命令模式下，此时键盘上输入的所有东西都被vi当作命令来对待。">
   
     <link rel="alternative" href="/atom.xml" title="周东辉的个人博客" type="application/atom+xml">
   
@@ -204,14 +190,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-wz stm32对接onenet" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux-朱老师学习笔记 - vim" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class=" article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      基于wz指令 stm32onenet对接 sprintf
+      Linux---vi的使用
     </h1>
   
 
@@ -223,8 +209,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/07/18/wz stm32对接onenet/" class="archive-article-date">
-        <time datetime="2019-07-18T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+<a href="/2019/08/13/Linux-朱老师学习笔记 - vim/" class="archive-article-date">
+        <time datetime="2019-08-13T03:02:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
 </a>
 
   
@@ -233,15 +219,39 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt</p>
+    <h1 id="vi基础使用"><a href="#vi基础使用" class="headerlink" title="vi基础使用"></a>vi基础使用</h1><p><em>使用vi来打开/创建一个文件，vi pathname
+</em>vi的两种模式：<br>命令模式：当vi打开时默认为命令模式，要转入输入模式，需要按a或者i键。在命令模式下，此时键盘上输入的所有东西都被vi当作命令来对待。</p>
 <a id="more"></a>
 <hr>
-<p>开始还找不到入口 ，<img src="https://img-blog.csdnimg.cn/2019080720153360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019080720160969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019080720170344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,tchuangjian
-创建好了之后添加设备
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019080720191259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>之后添加数据流模板<br><img src="https://img-blog.csdnimg.cn/20190807201958340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>之后 又创建啊一个应用<br><img src="https://img-blog.csdnimg.cn/20190807202057701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190807202147549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>上面的数据就是实时采集到的<br>这些弄完 基本就结束了 ，下面要在8266，刷入wz固件，我用的是arduinoIDE，，哦后面我需要修改些地方 基于阿正的程序，，今天就简单完成了数据上报，下发的还要在研究一下，程序段怎么处理<br>wz固件 在阿正工作站里面有 我就不发了 ，有需要的小伙伴可以留言，我感觉超级好用，但是对于数据下发，还有点问题感觉，可能是自己太菜了，还没悟出来<img src="https://img-blog.csdnimg.cn/20190807202828960.jpg" alt="在这里插入图片描述"></p>
-<p>而后面我用32写了程序，主要学习了sprintf的用法，总结一下<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stm32f10x.h"</span> <span class="comment">//STM32头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"sys.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"delay.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"relay.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"oled0561.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"usart.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"dht11.h"</span></span></div><div class="line">	<span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">send_onenet</span><span class="params">(<span class="keyword">char</span>*server,<span class="keyword">char</span>*user,<span class="keyword">char</span>*password,<span class="keyword">char</span>*id,<span class="keyword">char</span>*port,<span class="keyword">char</span>*topic_msg)</span></span>;	    </div><div class="line">	<span class="keyword">int</span> tem,temperature;  	    </div><div class="line">	<span class="keyword">int</span> hum,humidity;    </div><div class="line"><span class="keyword">int</span> s; 	</div><div class="line"><span class="keyword">char</span>  h[<span class="number">8</span>];</div><div class="line"><span class="keyword">char</span> t[<span class="number">8</span>];</div><div class="line"><span class="keyword">char</span> topicmsg[<span class="number">20</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span>&#123;<span class="comment">//主程序</span></div><div class="line">	</div><div class="line">	delay_ms(<span class="number">1000</span>); <span class="comment">//上电时等待其他器件就绪</span></div><div class="line">	RCC_Configuration(); <span class="comment">//系统时钟初始化 </span></div><div class="line">	RELAY_Init();<span class="comment">//继电器初始化</span></div><div class="line">USART1_Init(<span class="number">9600</span>);</div><div class="line">	I2C_Configuration();<span class="comment">//I2C初始化</span></div><div class="line">	OLED0561_Init(); <span class="comment">//OLED初始化</span></div><div class="line">	OLED_DISPLAY_8x16_BUFFER(<span class="number">0</span>,<span class="string">"     onenet    "</span>); <span class="comment">//显示字符串</span></div><div class="line">	OLED_DISPLAY_8x16_BUFFER(<span class="number">2</span>,<span class="string">"   DHT11 TEST   "</span>); <span class="comment">//显示字符串</span></div><div class="line"></div><div class="line">	<span class="keyword">if</span>(DHT11_Init()==<span class="number">0</span>)&#123; <span class="comment">//DHT11初始化	返回0成功，1失败</span></div><div class="line">		OLED_DISPLAY_8x16_BUFFER(<span class="number">4</span>,<span class="string">"Humidity:   %   "</span>); <span class="comment">//显示字符串</span></div><div class="line">		OLED_DISPLAY_8x16_BUFFER(<span class="number">6</span>,<span class="string">"Temperatur:   C"</span>); <span class="comment">//显示字符串</span></div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		OLED_DISPLAY_8x16_BUFFER(<span class="number">4</span>,<span class="string">"DHT11INIT ERROR!"</span>); <span class="comment">//显示字符串</span></div><div class="line">	&#125;</div><div class="line">	delay_ms(<span class="number">1000</span>);<span class="comment">//DHT11初始化后必要的延时（不得小于1秒）</span></div><div class="line">	</div><div class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</div><div class="line">			<span class="keyword">if</span>(s%<span class="number">10</span>==<span class="number">0</span>)			<span class="comment">//每100ms读取一次</span></div><div class="line">		&#123;									  </div><div class="line">			DHT11_Read_Data(&amp;temperature,&amp;humidity);	<span class="comment">//读取温湿度值					    </span></div><div class="line">		<span class="comment">//OLED_DISPLAY_8x16(4,10*8,humidity);//显示湿度?</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">4</span>,<span class="number">9</span>*<span class="number">8</span>,humidity/<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//显示湿度值</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">4</span>,<span class="number">10</span>*<span class="number">8</span>,humidity%<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">6</span>,<span class="number">11</span>*<span class="number">8</span>,temperature/<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//显示温度值</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">6</span>,<span class="number">12</span>*<span class="number">8</span>,temperature%<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//</span></div><div class="line">	 	delay_ms(<span class="number">10</span>);</div><div class="line">		 </div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		s++;</div><div class="line">		tem=temperature;</div><div class="line">		hum=humidity;</div><div class="line">		<span class="built_in">sprintf</span>(h,<span class="string">"%d"</span>,hum);</div><div class="line">		  <span class="built_in">sprintf</span>(t,<span class="string">"%d"</span>,tem);</div><div class="line">			<span class="built_in">sprintf</span>(topicmsg,<span class="string">"%s%s%s%s%s"</span>,<span class="string">"&#123;\\\"wendu\\\":\\\""</span>,t,<span class="string">"\\\",\\\"shidu\\\":\\\""</span>,h,<span class="string">"\\\"&#125;"</span>);</div><div class="line">			<span class="comment">// &#123;"wz":"zhoudonghui","id":"539412883","port":"6002","server":"mqtt.heclouds.com","user":"266757","password":"ynC3pLKrijXgWEJZ9OPAfKhy8ag=","topic&amp;msg":"&#123;\"wendu\":\"10\",\"shidu\":\"60\"&#125;"&#125;</span></div><div class="line">	<span class="keyword">if</span>(s%<span class="number">500</span>==<span class="number">0</span>)			<span class="comment">//每100ms读取一次</span></div><div class="line">		&#123;	</div><div class="line">		send_onenet(<span class="string">"mqtt.heclouds.com"</span>,<span class="string">"266757"</span>,<span class="string">"ynC3pLKrijXgWEJZ9OPAfKhy8ag="</span>,<span class="string">"539412883"</span>,<span class="string">"6002"</span>,topicmsg);</div><div class="line">		&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">send_onenet</span><span class="params">(<span class="keyword">char</span>*server,<span class="keyword">char</span>*user,<span class="keyword">char</span>*password,<span class="keyword">char</span>*id,<span class="keyword">char</span>*port,<span class="keyword">char</span>*topic_msg)</span></span></div><div class="line">		</div><div class="line">&#123;</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="keyword">char</span> onenet[<span class="number">200</span>];</div><div class="line">	<span class="built_in">sprintf</span>(onenet,<span class="string">"%s%s%s%s%s%s%s%s%s%s%s%s%s"</span>,<span class="string">"&#123;\"wz\":\"zhoudonghui\",\"id\":\""</span>,id,<span class="string">"\",\"port\":\""</span>,port,<span class="string">"\",\"server\":\""</span>,server,<span class="string">"\",\"user\":\""</span>,user,<span class="string">"\",\"password\":\""</span>,password,<span class="string">"\",\"topic&amp;msg\":\""</span>,topic_msg,<span class="string">"\"&#125;\r\n"</span>);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%s"</span>,onenet);</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">【变量定义】</div><div class="line">u32     a; <span class="comment">//定义32位无符号变量a</span></div><div class="line">u16     a; <span class="comment">//定义16位无符号变量a</span></div><div class="line">u8     a; <span class="comment">//定义8位无符号变量a</span></div><div class="line">vu32     a; <span class="comment">//定义易变的32位无符号变量a</span></div><div class="line">vu16     a; <span class="comment">//定义易变的 16位无符号变量a</span></div><div class="line">vu8     a; <span class="comment">//定义易变的 8位无符号变量a</span></div><div class="line">uc32     a; <span class="comment">//定义只读的32位无符号变量a</span></div><div class="line">uc16     a; <span class="comment">//定义只读 的16位无符号变量a</span></div><div class="line">uc8     a; <span class="comment">//定义只读 的8位无符号变量a</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ONE  1   <span class="comment">//宏定义</span></span></div><div class="line"></div><div class="line">delay_us(<span class="number">1</span>); <span class="comment">//延时1微秒</span></div><div class="line">delay_ms(<span class="number">1</span>); <span class="comment">//延时1毫秒</span></div><div class="line">delay_s(<span class="number">1</span>); <span class="comment">//延时1秒</span></div><div class="line"></div><div class="line">GPIO_WriteBit(LEDPORT,LED1,(BitAction)(<span class="number">1</span>)); <span class="comment">//LED控制</span></div><div class="line"></div><div class="line">*/</div></pre></td></tr></table></figure></p>
-<p><img src="https://img-blog.csdnimg.cn/20190807203220535.png" alt="在这里插入图片描述"><br>sprintf所要的库文件<br><img src="https://img-blog.csdnimg.cn/20190807203318831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190807203341177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190807203425435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>代码基本就是这个样子了 ，大约500ms上报一次，<br><img src="https://img-blog.csdnimg.cn/20190807203610795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在这里插入图片描述<br><img src="https://img-blog.csdnimg.cn/20190807203727312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>就这些了，未完待续<img src="https://img-blog.csdnimg.cn/20190807203920687.jpg" alt="在这里插入图片描述">``</p>
+<p>在命令模式下，最好不要乱输入。此时应该输入相应的命令，来让vi做相应的事。<br>输入模式：输入模式用来向文件输入内容。可以从命令模式中按a或者i进入输入模式。进入输入模式后，就可以随意按键盘进行输入了。输入完成后如果要保存，要先退回到命令模式（因为保存也是一种命令）。在输入模式下按ESC键退回到命令模式。<br>注：注意看屏幕左下角，当命令模式时无提示信息或者提示文件名等信息，等处于输入模式时，提示 – INSERT –<br>在命令模式下如何保存：<br>:wq            保存并且退出<br>:w            只保存不推出<br>:q            不保存退出        进来看了一下没改退出<br>:q!            不保存强制退出<br>:wq!        保存并强制退出</p>
+<h1 id="vi的高级使用"><a href="#vi的高级使用" class="headerlink" title="vi的高级使用"></a>vi的高级使用</h1><ul>
+<li><p>查找<br>在命令模式下，输入/xxx，就可以查找到xxx</p>
+</li>
+<li><p>快速切换行<br>在命令模式下，输入:num，就可以快速切换到num行</p>
+</li>
+<li><p>设置显示行号<br>在命令模式下，输入:set nu，就可以显示行号</p>
+</li>
+</ul>
+<p>注：设置不显示行号，命令模式输入:set nonu<br>设置永久显示行号，需要修改vi的配置文件。打开vi的配置文件~/.vimrc，在其中输入set nu即可。</p>
+<ul>
+<li><p>行删除<br>命令模式下，先将光标移动到要删除的行，然后输入dd<br>如果要删除连续多行，譬如要删除连续的3行，使用3dd </p>
+</li>
+<li><p>行复制粘贴<br>复制：命令模式下，nyy<br>粘贴：命令模式下，p<br>细节，复制时要把光标放在多行的第一行，粘贴时实际<br>粘贴到当前光标所在行的下一行。</p>
+</li>
+</ul>
+<h1 id="linux中权限表示-amp-管理"><a href="#linux中权限表示-amp-管理" class="headerlink" title="linux中权限表示&amp;管理"></a>linux中权限表示&amp;管理</h1><h2 id="普通用户与特权用户-su命令切换用户"><a href="#普通用户与特权用户-su命令切换用户" class="headerlink" title="普通用户与特权用户 su命令切换用户"></a>普通用户与特权用户 su命令切换用户</h2><p>Windows中有普通用户和特权用户，特权用户是Administrator，普通用户可以有很多个。<br>特权用户是系统的管理员，对系统内所有文件具有操作权限。每个普通用户只能处理自己的文件，不能访问其他用户的文件，更不能随意处理操作系统的文件。<br>Linux中也有普通用户和特权用户的区别。特权用户就是root用户。普通用户权限受到限制，譬如说普通用户不能<br>cd /root，普通用户不能使用apt-get install 来装软件。    </p>
+<p>可以使用su 用户名来在不同用户间切换。譬如要从普通<br>用户切换到root，可以su root，然后输入root的密码即可转入root用户。从root要切换到普通用户gec，则su gec即可。</p>
+<h2 id="rwx与权限表示"><a href="#rwx与权限表示" class="headerlink" title="rwx与权限表示"></a>rwx与权限表示</h2><p>ls -l显示详细信息<br>drwxr-xr-x    10个字符，第一个表示文件类型。剩下的9<br>个分成3组，表示文件权限。<br>前三个表示此文件的属主对文件的权限<br>中间三个表示此文件属主所在的组对文件的权限<br>最后三个表示其他用户对文件的权限<br>rwx怎么解析：r代表可读，w代表可写，x代表可执行<br>rwx：可读，可写，可执行<br>r-x: 可读，不可写，可执行<br>r–: 可读，不可写，不可执行</p>
+<h2 id="使用sudo暂时获取root权限"><a href="#使用sudo暂时获取root权限" class="headerlink" title="使用sudo暂时获取root权限"></a>使用sudo暂时获取root权限</h2><p>这是ubuntu的一个特点，在ubuntu中可以使用sudo命令让普通用户暂时获取root用户的权限，而不必进行用户切换。</p>
+<p>使用技巧：<br>1、使用shell的Tab键自动补全<br>    Tab在linux命令行输入中可以自动完成。在linux<br>    命令行中使用Tab键会极大提高输入效率<br>2、使用shell的历史记录<br>    shell会记录用户执行命令的历史记录，而我们一般使用命令都会在短时间内集中反复使用<br>    因此当你需要使用一条刚才还使用过的命令时，不需再次花时间输入，只要按下键盘上下<br>    箭头按键，就可实现上下翻页，翻出刚才用过的命令，直接回车执行。就好像电话机的<br>    通话记录和快速回拨一样。</p>
+<p>3、linux命令行中一些符号的含义：<br>    .        代表当前目录<br>    ..        代表上一层目录，当前目录的父目录</p>
+<pre><code>-        代表前一个目录，我刚才从哪个目录cd过来
+~        代表当前用户的宿主目录
+/        代表根目录
+$        普通用户的命令行提示符
+#        root用户的命令行提示符
+*        万能匹配符
+</code></pre><p>宿主目录：所谓宿主目录，就是操作系统为当前用户所设计的用来存放文件、工作的默认目录。如Windows中的“我的文档”目录，就是Windows为我们设计的宿主目录。<br>Linux中每个用户都有自己的宿主目录，这个目录对于普通用户来说，在/home/username/，而对于root用户来说，在/root。    </p>
 
     
 
@@ -288,7 +298,7 @@
           </li>
           <li>
             <strong>本文链接：</strong>
-            <a href="www.zdh666.club/2019/07/18/wz stm32对接onenet/" title="基于wz指令 stm32onenet对接 sprintf" target="_blank">www.zdh666.club/2019/07/18/wz stm32对接onenet/</a>
+            <a href="www.zdh666.club/2019/08/13/Linux-朱老师学习笔记 - vim/" title="Linux---vi的使用" target="_blank">www.zdh666.club/2019/08/13/Linux-朱老师学习笔记 - vim/</a>
           </li>
           <li>
             <strong>版权声明： </strong>
@@ -307,11 +317,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">onenet</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">stm32</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -367,7 +373,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:www.zdh666.club/2019/07/18/wz stm32对接onenet/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:www.zdh666.club/2019/08/13/Linux-朱老师学习笔记 - vim/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -382,18 +388,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/07/24/dht11 arduino  2个 温湿度传感器/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/14/Linux-朱老师学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          dht11 arduino 同时使用多个 dht11
+          Linux---基本命令
         
       </div>
     </a>
   
   
-    <a href="/2019/07/18/esp8266 微信 提醒 server酱 使用心得/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">esp8266 微信 提醒 server酱 使用心得</div>
+    <a href="/2019/08/11/linux进阶1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux-高级命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -420,7 +426,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vi基础使用"><span class="toc-number">1.</span> <span class="toc-text">vi基础使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vi的高级使用"><span class="toc-number">2.</span> <span class="toc-text">vi的高级使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#linux中权限表示-amp-管理"><span class="toc-number">3.</span> <span class="toc-text">linux中权限表示&管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#普通用户与特权用户-su命令切换用户"><span class="toc-number">3.1.</span> <span class="toc-text">普通用户与特权用户 su命令切换用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rwx与权限表示"><span class="toc-number">3.2.</span> <span class="toc-text">rwx与权限表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用sudo暂时获取root权限"><span class="toc-number">3.3.</span> <span class="toc-text">使用sudo暂时获取root权限</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -447,9 +453,9 @@
     <script src="/assets/gitment.js"></script>
   
   <script>
-    <!-- id: "基于wz指令 stm32onenet对接 sprintf" -->
+    <!-- id: "Linux---vi的使用" -->
     var gitment = new Gitment({
-      id: "20190718103600",
+      id: "20190813110221",
       owner: 'ture',
       repo: 'zdh666',
       oauth: {

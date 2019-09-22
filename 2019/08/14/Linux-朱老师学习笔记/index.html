@@ -6,36 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="www.zdh666.club">
-  <title>基于wz指令 stm32onenet对接 sprintf | 周东辉的个人博客</title>
+  <title>Linux---基本命令 | 周东辉的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt">
+  <meta name="description" content="ls（list，列表）作用：使用列表把当前文件夹下所有文件显示出来    ls -a    显示所有文件，包括隐藏文件    ls -l    以详细信息显示    ls -a -l    ls -l -a    ls -la    ls -al    四种方式都是可以的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于wz指令 stm32onenet对接 sprintf">
-<meta property="og:url" content="www.zdh666.club/2019/07/18/wz stm32对接onenet/index.html">
+<meta property="og:title" content="Linux---基本命令">
+<meta property="og:url" content="www.zdh666.club/2019/08/14/Linux-朱老师学习笔记/index.html">
 <meta property="og:site_name" content="周东辉的个人博客">
-<meta property="og:description" content="今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019080720153360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019080720160969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019080720170344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,tchuangjian
-创建好了之后添加设备
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019080720191259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807201958340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807202057701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807202147549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807202828960.jpg">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203220535.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203318831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203341177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203425435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203610795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203727312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190807203920687.jpg">
-<meta property="og:updated_time" content="2019-08-10T03:25:34.061Z">
+<meta property="og:description" content="ls（list，列表）作用：使用列表把当前文件夹下所有文件显示出来    ls -a    显示所有文件，包括隐藏文件    ls -l    以详细信息显示    ls -a -l    ls -l -a    ls -la    ls -al    四种方式都是可以的">
+<meta property="og:updated_time" content="2019-09-22T01:52:30.360Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于wz指令 stm32onenet对接 sprintf">
-<meta name="twitter:description" content="今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019080720153360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:title" content="Linux---基本命令">
+<meta name="twitter:description" content="ls（list，列表）作用：使用列表把当前文件夹下所有文件显示出来    ls -a    显示所有文件，包括隐藏文件    ls -l    以详细信息显示    ls -a -l    ls -l -a    ls -la    ls -al    四种方式都是可以的">
   
     <link rel="alternative" href="/atom.xml" title="周东辉的个人博客" type="application/atom+xml">
   
@@ -204,14 +187,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-wz stm32对接onenet" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux-朱老师学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class=" article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      基于wz指令 stm32onenet对接 sprintf
+      Linux---基本命令
     </h1>
   
 
@@ -223,8 +206,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/07/18/wz stm32对接onenet/" class="archive-article-date">
-        <time datetime="2019-07-18T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+<a href="/2019/08/14/Linux-朱老师学习笔记/" class="archive-article-date">
+        <time datetime="2019-08-14T03:02:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-14</time>
 </a>
 
   
@@ -233,15 +216,26 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>今天耐下心来 将onenet 对接成功发现onenet ，改版了 我今天对接的是老版的mqtt</p>
-<a id="more"></a>
+    <h1 id="ls（list，列表）"><a href="#ls（list，列表）" class="headerlink" title="ls（list，列表）"></a>ls（list，列表）</h1><p>作用：使用列表把当前文件夹下所有文件显示出来<br>    ls -a    显示所有文件，包括隐藏文件<br>    ls -l    以详细信息显示<br>    ls -a -l<br>    ls -l -a<br>    ls -la<br>    ls -al    四种方式都是可以的<br><a id="more"></a></p>
 <hr>
-<p>开始还找不到入口 ，<img src="https://img-blog.csdnimg.cn/2019080720153360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019080720160969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019080720170344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,tchuangjian
-创建好了之后添加设备
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019080720191259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>之后添加数据流模板<br><img src="https://img-blog.csdnimg.cn/20190807201958340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>之后 又创建啊一个应用<br><img src="https://img-blog.csdnimg.cn/20190807202057701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190807202147549.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>上面的数据就是实时采集到的<br>这些弄完 基本就结束了 ，下面要在8266，刷入wz固件，我用的是arduinoIDE，，哦后面我需要修改些地方 基于阿正的程序，，今天就简单完成了数据上报，下发的还要在研究一下，程序段怎么处理<br>wz固件 在阿正工作站里面有 我就不发了 ，有需要的小伙伴可以留言，我感觉超级好用，但是对于数据下发，还有点问题感觉，可能是自己太菜了，还没悟出来<img src="https://img-blog.csdnimg.cn/20190807202828960.jpg" alt="在这里插入图片描述"></p>
-<p>而后面我用32写了程序，主要学习了sprintf的用法，总结一下<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stm32f10x.h"</span> <span class="comment">//STM32头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"sys.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"delay.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"relay.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"oled0561.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"usart.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"dht11.h"</span></span></div><div class="line">	<span class="function"><span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">send_onenet</span><span class="params">(<span class="keyword">char</span>*server,<span class="keyword">char</span>*user,<span class="keyword">char</span>*password,<span class="keyword">char</span>*id,<span class="keyword">char</span>*port,<span class="keyword">char</span>*topic_msg)</span></span>;	    </div><div class="line">	<span class="keyword">int</span> tem,temperature;  	    </div><div class="line">	<span class="keyword">int</span> hum,humidity;    </div><div class="line"><span class="keyword">int</span> s; 	</div><div class="line"><span class="keyword">char</span>  h[<span class="number">8</span>];</div><div class="line"><span class="keyword">char</span> t[<span class="number">8</span>];</div><div class="line"><span class="keyword">char</span> topicmsg[<span class="number">20</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span>&#123;<span class="comment">//主程序</span></div><div class="line">	</div><div class="line">	delay_ms(<span class="number">1000</span>); <span class="comment">//上电时等待其他器件就绪</span></div><div class="line">	RCC_Configuration(); <span class="comment">//系统时钟初始化 </span></div><div class="line">	RELAY_Init();<span class="comment">//继电器初始化</span></div><div class="line">USART1_Init(<span class="number">9600</span>);</div><div class="line">	I2C_Configuration();<span class="comment">//I2C初始化</span></div><div class="line">	OLED0561_Init(); <span class="comment">//OLED初始化</span></div><div class="line">	OLED_DISPLAY_8x16_BUFFER(<span class="number">0</span>,<span class="string">"     onenet    "</span>); <span class="comment">//显示字符串</span></div><div class="line">	OLED_DISPLAY_8x16_BUFFER(<span class="number">2</span>,<span class="string">"   DHT11 TEST   "</span>); <span class="comment">//显示字符串</span></div><div class="line"></div><div class="line">	<span class="keyword">if</span>(DHT11_Init()==<span class="number">0</span>)&#123; <span class="comment">//DHT11初始化	返回0成功，1失败</span></div><div class="line">		OLED_DISPLAY_8x16_BUFFER(<span class="number">4</span>,<span class="string">"Humidity:   %   "</span>); <span class="comment">//显示字符串</span></div><div class="line">		OLED_DISPLAY_8x16_BUFFER(<span class="number">6</span>,<span class="string">"Temperatur:   C"</span>); <span class="comment">//显示字符串</span></div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		OLED_DISPLAY_8x16_BUFFER(<span class="number">4</span>,<span class="string">"DHT11INIT ERROR!"</span>); <span class="comment">//显示字符串</span></div><div class="line">	&#125;</div><div class="line">	delay_ms(<span class="number">1000</span>);<span class="comment">//DHT11初始化后必要的延时（不得小于1秒）</span></div><div class="line">	</div><div class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</div><div class="line">			<span class="keyword">if</span>(s%<span class="number">10</span>==<span class="number">0</span>)			<span class="comment">//每100ms读取一次</span></div><div class="line">		&#123;									  </div><div class="line">			DHT11_Read_Data(&amp;temperature,&amp;humidity);	<span class="comment">//读取温湿度值					    </span></div><div class="line">		<span class="comment">//OLED_DISPLAY_8x16(4,10*8,humidity);//显示湿度?</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">4</span>,<span class="number">9</span>*<span class="number">8</span>,humidity/<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//显示湿度值</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">4</span>,<span class="number">10</span>*<span class="number">8</span>,humidity%<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">6</span>,<span class="number">11</span>*<span class="number">8</span>,temperature/<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//显示温度值</span></div><div class="line">			OLED_DISPLAY_8x16(<span class="number">6</span>,<span class="number">12</span>*<span class="number">8</span>,temperature%<span class="number">10</span> +<span class="number">0x30</span>);<span class="comment">//</span></div><div class="line">	 	delay_ms(<span class="number">10</span>);</div><div class="line">		 </div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		s++;</div><div class="line">		tem=temperature;</div><div class="line">		hum=humidity;</div><div class="line">		<span class="built_in">sprintf</span>(h,<span class="string">"%d"</span>,hum);</div><div class="line">		  <span class="built_in">sprintf</span>(t,<span class="string">"%d"</span>,tem);</div><div class="line">			<span class="built_in">sprintf</span>(topicmsg,<span class="string">"%s%s%s%s%s"</span>,<span class="string">"&#123;\\\"wendu\\\":\\\""</span>,t,<span class="string">"\\\",\\\"shidu\\\":\\\""</span>,h,<span class="string">"\\\"&#125;"</span>);</div><div class="line">			<span class="comment">// &#123;"wz":"zhoudonghui","id":"539412883","port":"6002","server":"mqtt.heclouds.com","user":"266757","password":"ynC3pLKrijXgWEJZ9OPAfKhy8ag=","topic&amp;msg":"&#123;\"wendu\":\"10\",\"shidu\":\"60\"&#125;"&#125;</span></div><div class="line">	<span class="keyword">if</span>(s%<span class="number">500</span>==<span class="number">0</span>)			<span class="comment">//每100ms读取一次</span></div><div class="line">		&#123;	</div><div class="line">		send_onenet(<span class="string">"mqtt.heclouds.com"</span>,<span class="string">"266757"</span>,<span class="string">"ynC3pLKrijXgWEJZ9OPAfKhy8ag="</span>,<span class="string">"539412883"</span>,<span class="string">"6002"</span>,topicmsg);</div><div class="line">		&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">send_onenet</span><span class="params">(<span class="keyword">char</span>*server,<span class="keyword">char</span>*user,<span class="keyword">char</span>*password,<span class="keyword">char</span>*id,<span class="keyword">char</span>*port,<span class="keyword">char</span>*topic_msg)</span></span></div><div class="line">		</div><div class="line">&#123;</div><div class="line">	</div><div class="line">	</div><div class="line">	<span class="keyword">char</span> onenet[<span class="number">200</span>];</div><div class="line">	<span class="built_in">sprintf</span>(onenet,<span class="string">"%s%s%s%s%s%s%s%s%s%s%s%s%s"</span>,<span class="string">"&#123;\"wz\":\"zhoudonghui\",\"id\":\""</span>,id,<span class="string">"\",\"port\":\""</span>,port,<span class="string">"\",\"server\":\""</span>,server,<span class="string">"\",\"user\":\""</span>,user,<span class="string">"\",\"password\":\""</span>,password,<span class="string">"\",\"topic&amp;msg\":\""</span>,topic_msg,<span class="string">"\"&#125;\r\n"</span>);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%s"</span>,onenet);</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">【变量定义】</div><div class="line">u32     a; <span class="comment">//定义32位无符号变量a</span></div><div class="line">u16     a; <span class="comment">//定义16位无符号变量a</span></div><div class="line">u8     a; <span class="comment">//定义8位无符号变量a</span></div><div class="line">vu32     a; <span class="comment">//定义易变的32位无符号变量a</span></div><div class="line">vu16     a; <span class="comment">//定义易变的 16位无符号变量a</span></div><div class="line">vu8     a; <span class="comment">//定义易变的 8位无符号变量a</span></div><div class="line">uc32     a; <span class="comment">//定义只读的32位无符号变量a</span></div><div class="line">uc16     a; <span class="comment">//定义只读 的16位无符号变量a</span></div><div class="line">uc8     a; <span class="comment">//定义只读 的8位无符号变量a</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> ONE  1   <span class="comment">//宏定义</span></span></div><div class="line"></div><div class="line">delay_us(<span class="number">1</span>); <span class="comment">//延时1微秒</span></div><div class="line">delay_ms(<span class="number">1</span>); <span class="comment">//延时1毫秒</span></div><div class="line">delay_s(<span class="number">1</span>); <span class="comment">//延时1秒</span></div><div class="line"></div><div class="line">GPIO_WriteBit(LEDPORT,LED1,(BitAction)(<span class="number">1</span>)); <span class="comment">//LED控制</span></div><div class="line"></div><div class="line">*/</div></pre></td></tr></table></figure></p>
-<p><img src="https://img-blog.csdnimg.cn/20190807203220535.png" alt="在这里插入图片描述"><br>sprintf所要的库文件<br><img src="https://img-blog.csdnimg.cn/20190807203318831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190807203341177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190807203425435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>代码基本就是这个样子了 ，大约500ms上报一次，<br><img src="https://img-blog.csdnimg.cn/20190807203610795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在这里插入图片描述<br><img src="https://img-blog.csdnimg.cn/20190807203727312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIzMzE4OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>就这些了，未完待续<img src="https://img-blog.csdnimg.cn/20190807203920687.jpg" alt="在这里插入图片描述">``</p>
+<h1 id="cd（change-directory，更改目录）"><a href="#cd（change-directory，更改目录）" class="headerlink" title="cd（change directory，更改目录）"></a>cd（change directory，更改目录）</h1><p>作用：用来切换目录<br>涉及到相对路径和绝对路径<br>cd ..        ..代表上一层目录<br>            .代表当前目录</p>
+<h1 id="pwd（print-work-directory，打印工作目录）"><a href="#pwd（print-work-directory，打印工作目录）" class="headerlink" title="pwd（print work directory，打印工作目录）"></a>pwd（print work directory，打印工作目录）</h1><p>作用：打印出当前的绝对路径</p>
+<h1 id="mkdir（make-directory，创建文件夹）"><a href="#mkdir（make-directory，创建文件夹）" class="headerlink" title="mkdir（make directory，创建文件夹）"></a>mkdir（make directory，创建文件夹）</h1><p>作用：创建空文件夹<br>    mkdir -p 级联创建文件夹</p>
+<h1 id="mv（move，移动）"><a href="#mv（move，移动）" class="headerlink" title="mv（move，移动）"></a>mv（move，移动）</h1><p>作用：在目录间移动文件，重命名文件<br>    mv 源文件pathname 目的文件pathname</p>
+<h1 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h1><p>作用：创建空文件<br>    touch pathname</p>
+<h1 id="cp（copy，复制）"><a href="#cp（copy，复制）" class="headerlink" title="cp（copy，复制）"></a>cp（copy，复制）</h1><p>作用：复制文件或文件夹<br>    cp 源文件pathname 目标文件pathname<br>    cp -r 用来复制文件夹<br>    cp -f 强制复制<br>实际操作时，一般都是cp -f复制文件，<br>cp -rf复制文件夹</p>
+<h1 id="rm（remove，去除，删除）"><a href="#rm（remove，去除，删除）" class="headerlink" title="rm（remove，去除，删除）"></a>rm（remove，去除，删除）</h1><p>作用：用来删除文件，文件夹<br>    rm 文件pathname<br>    rm -r 文件夹pathname</p>
+<h1 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h1><p>作用：直接在命令行下显示文件内容<br>    也可以用来向文件输入，暂时不管</p>
+<h1 id="rmdir（remove-directory，删除文件夹）"><a href="#rmdir（remove-directory，删除文件夹）" class="headerlink" title="rmdir（remove directory，删除文件夹）"></a>rmdir（remove directory，删除文件夹）</h1><p>作用：删除空文件夹<br>rmdir和rm -r的区别：rmdir只能删除空文件夹，而rm -r可以删除空文件夹和非空文件夹</p>
+<h1 id="ln（link，连接文件）"><a href="#ln（link，连接文件）" class="headerlink" title="ln（link，连接文件）"></a>ln（link，连接文件）</h1><p>基础：windows中快捷方式，实际上快捷方式和它指向的文件是独立的两个文件，两个都占硬盘空间，只不过用户访问快捷方式时，其效果等同于访问指向的文件。        </p>
+<p>linux中有两种连接文件：<br>一种叫软连接（符号连接），等同于windows中快捷方式<br>一种叫硬连接<br>创建软连接文件： ln -s 源文件名 符号连接文件名<br>举例：ln -s src.c，linker.c，    linker.c就是<br>src.c的一个符号连接文件</p>
+<p>硬连接：ln 源文件名 连接文件名<br>硬连接实际上和源文件在硬盘中是同一个东西，效果类似于硬盘上的一个文件，在文件系统上，在我们看来有好多个文件一样。每次删除一个文件时，只要他还有其他的硬连接存在，这个文件就不会被真正删除。只有等所有的连接文件都删除掉了，这个文件才会被真正从硬盘上删除。</p>
+<p>基础知识：<br>1、ls -l显示的详细信息中：<br>-rw-r–r–<br>drwxr-xr-x<br>一共10个字符，第一个字符表示文件类型，后面9个字符表示文件权限。<br>文件类型：</p>
+<ul>
+<li>表示普通文件。普通文件指文本文件和二进制<br>  文件，如a.c  1.txt a.out都是普通文件<br>d 表示文件夹，d是directory的缩写<br>l 表示符号连接文件，后面会用-&gt;打印出它指向的文件<br>s 表示socket文件<br>p 表示管道文件 pipe</li>
+</ul>
+<h1 id="man"><a href="#man" class="headerlink" title="man"></a>man</h1><p>作用：查询man手册，获得帮助信息<br>man 1 ls        1表示查询的是linux命令<br>man 2 xxx        2表示查询的是linux api<br>man 3 xxx        3表示查询的是C库函数<br>注意：在man手册中查询时，退出按Q键（Q就是quit的缩写）</p>
+<h1 id="apt-get"><a href="#apt-get" class="headerlink" title="apt-get"></a>apt-get</h1><p>作用：在ubuntu中用来在线安装、卸载软件的程序<br>    apt-get install vim<br>    apt-get remove vim<br>注意，安装和卸载都是在线的，也就是说ubuntu必须能上网才能使用apt-get </p>
 
     
 
@@ -288,7 +282,7 @@
           </li>
           <li>
             <strong>本文链接：</strong>
-            <a href="www.zdh666.club/2019/07/18/wz stm32对接onenet/" title="基于wz指令 stm32onenet对接 sprintf" target="_blank">www.zdh666.club/2019/07/18/wz stm32对接onenet/</a>
+            <a href="www.zdh666.club/2019/08/14/Linux-朱老师学习笔记/" title="Linux---基本命令" target="_blank">www.zdh666.club/2019/08/14/Linux-朱老师学习笔记/</a>
           </li>
           <li>
             <strong>版权声明： </strong>
@@ -307,11 +301,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">onenet</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">stm32</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
@@ -367,7 +357,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:www.zdh666.club/2019/07/18/wz stm32对接onenet/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http:www.zdh666.club/2019/08/14/Linux-朱老师学习笔记/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -382,18 +372,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/07/24/dht11 arduino  2个 温湿度传感器/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/15/aliyundiyic/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          dht11 arduino 同时使用多个 dht11
+          阿里云mqtt对接8266
         
       </div>
     </a>
   
   
-    <a href="/2019/07/18/esp8266 微信 提醒 server酱 使用心得/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">esp8266 微信 提醒 server酱 使用心得</div>
+    <a href="/2019/08/13/Linux-朱老师学习笔记 - vim/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux---vi的使用</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -420,7 +410,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ls（list，列表）"><span class="toc-number">1.</span> <span class="toc-text">ls（list，列表）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cd（change-directory，更改目录）"><span class="toc-number">2.</span> <span class="toc-text">cd（change directory，更改目录）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pwd（print-work-directory，打印工作目录）"><span class="toc-number">3.</span> <span class="toc-text">pwd（print work directory，打印工作目录）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mkdir（make-directory，创建文件夹）"><span class="toc-number">4.</span> <span class="toc-text">mkdir（make directory，创建文件夹）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mv（move，移动）"><span class="toc-number">5.</span> <span class="toc-text">mv（move，移动）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#touch"><span class="toc-number">6.</span> <span class="toc-text">touch</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cp（copy，复制）"><span class="toc-number">7.</span> <span class="toc-text">cp（copy，复制）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rm（remove，去除，删除）"><span class="toc-number">8.</span> <span class="toc-text">rm（remove，去除，删除）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cat"><span class="toc-number">9.</span> <span class="toc-text">cat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rmdir（remove-directory，删除文件夹）"><span class="toc-number">10.</span> <span class="toc-text">rmdir（remove directory，删除文件夹）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ln（link，连接文件）"><span class="toc-number">11.</span> <span class="toc-text">ln（link，连接文件）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#man"><span class="toc-number">12.</span> <span class="toc-text">man</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#apt-get"><span class="toc-number">13.</span> <span class="toc-text">apt-get</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -447,9 +437,9 @@
     <script src="/assets/gitment.js"></script>
   
   <script>
-    <!-- id: "基于wz指令 stm32onenet对接 sprintf" -->
+    <!-- id: "Linux---基本命令" -->
     var gitment = new Gitment({
-      id: "20190718103600",
+      id: "20190814110221",
       owner: 'ture',
       repo: 'zdh666',
       oauth: {
